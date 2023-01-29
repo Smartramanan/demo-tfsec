@@ -3,22 +3,22 @@ resource "aws_s3_bucket" "this" {
   bucket = "terraform-is-love"
   acl    = "private"
 
-  server_side_encryption_configuration {
-    rule {
-      apply_server_side_encryption_by_default {
-        kms_master_key_id = "aws_kms_key.this.arn"
-        sse_algorithm     = "aws:kms"
-      }
-    }
-  }
+#   server_side_encryption_configuration {
+#     rule {
+#       apply_server_side_encryption_by_default {
+#         kms_master_key_id = "aws_kms_key.this.arn"
+#         sse_algorithm     = "aws:kms"
+#       }
+#     }
+#   }
 
-  versioning {
-    enabled = true
-  }
+#   versioning {
+#     enabled = true
+#   }
 
-  tags = {
-    Owner = "WeScale"
-  }
+#   tags = {
+#     Owner = "WeScale"
+#   }
 }
 
 resource "aws_s3_bucket_public_access_block" "this" {
