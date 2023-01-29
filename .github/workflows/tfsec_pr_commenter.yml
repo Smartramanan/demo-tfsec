@@ -10,6 +10,6 @@ jobs:
       - name: Clone repo
         uses: actions/checkout@main
       - name: tfsec
-        uses: aquasecurity/tfsec-pr-commenter-action@main
+        uses: aquasecurity/tfsec-pr-commenter-action@v0.1.3
         with:
           github_token: ${{ github.token }}
